@@ -1,0 +1,4 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\SQL Server Management Studio\12.0\Packages\{49dfca8b-294e-4fa6-8ef5-f59fcaffdf01}]
+"SkipLoading"=dword:00000001
