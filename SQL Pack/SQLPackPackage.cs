@@ -20,6 +20,9 @@ using Microsoft.SqlServer.Management.SqlStudio.Explorer;
 using Microsoft.SqlServer.Management;
 using SQL_Pack.MenuItems;
 using System.Windows.Forms;
+using EnvDTE;
+using Microsoft.VisualStudio.CommandBars;
+using System.Reflection;
 
 namespace SQL_Pack
 {
@@ -51,7 +54,7 @@ namespace SQL_Pack
         /// SQLPackPackage GUID string.
         /// </summary>
         public const string PackageGuidString = "49dfca8b-294e-4fa6-8ef5-f59fcaffdf01";
-        private HierarchyObject _tableMenu = null;
+        private HierarchyObject dbMenu = null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SQLPackPackage"/> class.
@@ -79,6 +82,39 @@ namespace SQL_Pack
 
             // Reg setting is removed after initialize. Wait short delay then recreate it.
             DelayAddSkipLoadingReg();
+
+            //dte = (EnvDTE.DTE)GetService(typeof(EnvDTE.DTE));
+
+            //Window window = dte.Windows.Item(EnvDTE.Constants.vsWindowKindOutput);
+            //OutputWindow outputWindow = (OutputWindow)window.Object;
+            //OutputWindowPane owp;
+            ////outputWindow.ActivePane.Activate();
+
+            //owp = outputWindow.OutputWindowPanes.Add("new pane");
+            //owp.OutputString("hello");
+            //owp.Activate();
+            try
+            {
+                //Microsoft.VisualStudio.CommandBars.CommandBar sqlQueryGridPane = ((CommandBars)dte.CommandBars)["SQL Results Grid Tab Context"];
+                //MessageBox.Show(sqlQueryGridPane.);
+                //CommandBarControl cmdBarControl2 = sqlQueryGridPane.Controls.Add(MsoControlType.msoControlButton, Missing.Value, Missing.Value, Missing.Value, true);
+                
+                //var myButton = (CommandBarButton)cmdBarControl2;
+                //myButton.Visible = true;
+                //myButton.Enabled = true;
+                //myButton.Caption = "XXX SQL";
+                //myButton.FaceId = 224;
+                //myButton.Style = MsoButtonStyle.msoButtonIconAndCaption;
+                //myButton.Click += new _CommandBarButtonEvents_ClickEventHandler(btnMEssageBoxxResults_Click);
+            }
+            catch(Exception ee) { MessageBox.Show(ee.ToString()); }
+
+
+        }
+
+        private void btnMEssageBoxxResults_Click(CommandBarButton Ctrl, ref bool CancelDefault)
+        {
+            MessageBox.Show("kokokokoko");
         }
 
         private void ActionContextOnCurrentContextChanged(object sender, EventArgs e)
@@ -102,16 +138,20 @@ namespace SQL_Pack
                     }
                 }
             }
+            #pragma warning disable 0169
+#pragma warning disable CS0168 // Variable is declared but never used
             catch (Exception ObjectExplorerContextException)
+#pragma warning restore CS0168 // Variable is declared but never used
             {
                 //MessageBox.Show("ObjectExplorerContextException: " + ObjectExplorerContextException.Message);
             }
+            #pragma warning restore 0169
         }
 
         private void AddMenuItemToHierarchyObject(INodeInformation node, object item)
         {
-            _tableMenu = (HierarchyObject)node.GetService(typeof(IMenuHandler));
-            _tableMenu.AddChild(string.Empty, item);
+            dbMenu = (HierarchyObject)node.GetService(typeof(IMenuHandler));
+            dbMenu.AddChild(string.Empty, item);
         }
 
         private void AddSkipLoadingReg()

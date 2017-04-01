@@ -188,6 +188,9 @@
       <HintPath>..\packages\Microsoft.VisualStudio.Validation.14.1.111\lib\net45\Microsoft.VisualStudio.Validation.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="SQLEditors">
+      <HintPath>..\..\..\..\..\Desktop\SQLEditors.dll</HintPath>
+    </Reference>
     <Reference Include="SqlPackageBase">
       <HintPath>..\..\..\..\..\Desktop\SqlPackageBase.dll</HintPath>
     </Reference>

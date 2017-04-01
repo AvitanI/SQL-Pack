@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQL Pack", "SQL Pack\SQL Pa
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SQL Pack Setup", "SQL Pack Setup\SQL Pack Setup.vdproj", "{9940598D-E7F7-4D97-8E05-6BA934569831}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegCustomAction", "RegCustomAction\RegCustomAction.csproj", "{564AB811-FBDE-4842-9200-6D22027439D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{740137EF-4334-4C45-9FC3-6C43D497B86B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9940598D-E7F7-4D97-8E05-6BA934569831}.Debug|Any CPU.ActiveCfg = Debug
 		{9940598D-E7F7-4D97-8E05-6BA934569831}.Release|Any CPU.ActiveCfg = Release
+		{564AB811-FBDE-4842-9200-6D22027439D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{564AB811-FBDE-4842-9200-6D22027439D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{564AB811-FBDE-4842-9200-6D22027439D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{564AB811-FBDE-4842-9200-6D22027439D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

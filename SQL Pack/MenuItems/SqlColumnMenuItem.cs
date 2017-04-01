@@ -81,7 +81,6 @@ namespace SQL_Pack.MenuItems
 
         private void Duplicate(object sender, EventArgs e)
         {
-
             try
             {
                 NodeContextInfo nodeCtx = new NodeContextInfo(NodeType.Column, this.Parent);

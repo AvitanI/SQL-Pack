@@ -18,12 +18,7 @@ namespace SQL_Pack.MenuItems
         /// <summary>
         /// contructors
         /// </summary>
-        public MenuItemAbstract()
-        {
-            // init
-            //this.mainItem = new ToolStripMenuItem("Fine SQL Tool");
-            //mainItem.Image = FineSQL.Properties.Resources.package;
-        }
+        public MenuItemAbstract() {}
 
         protected ToolStripMenuItem GetMainItem()
         {

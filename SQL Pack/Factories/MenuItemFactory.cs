@@ -1,4 +1,5 @@
-﻿using Microsoft.SqlServer.Management.UI.VSIntegration.ObjectExplorer;
+﻿using EnvDTE;
+using Microsoft.SqlServer.Management.UI.VSIntegration.ObjectExplorer;
 using SQL_Pack.MenuItems;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,6 @@ namespace SQL_Pack.Factories
                     if (!IsDBMenuAdded)
                     {
                         menuItem = new SqlDBMenuItem();
-                        //AddMenuItemToHierarchyObject(node, new SqlDBMenuItem());
                         IsDBMenuAdded = true;
                     }
                     break;
@@ -31,7 +31,6 @@ namespace SQL_Pack.Factories
                     if (!IsTableMenuAdded)
                     {
                         menuItem = new SqlTableMenuItem();
-                        //AddMenuItemToHierarchyObject(node, new SqlTableMenuItem());
                         IsTableMenuAdded = true;
                     }
                     break;
@@ -39,7 +38,6 @@ namespace SQL_Pack.Factories
                     if (!IsColumnMenuAdded)
                     {
                         menuItem = new SqlColumnMenuItem();
-                        //AddMenuItemToHierarchyObject(node, new SqlColumnMenuItem());
                         IsColumnMenuAdded = true;
                     }
                     break;
